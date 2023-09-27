@@ -11,6 +11,14 @@ export default {
         purplehaze: '#BDB5C0',
         coffee: '#4C3D40'
       },
+      screens: {
+        'mobile-xs': {max: '320px'},
+        'mobile-md': {max: '375px'},
+        'mobile-lg': {max: '425px'},
+      },
+      zIndex: {
+        999: 999
+      }
     },
   },
   plugins: [],

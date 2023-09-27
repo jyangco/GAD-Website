@@ -18,3 +18,25 @@ body, html{
   /* background: #F6EEF0; */
   font-family: 'Calibri';
 }
+
+#container-holder{
+  position: relative;
+  background: white;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.text-container{
+  position: absolute;
+  background-color: white;
+  margin-top: -690px;
+  width: 100%;
+  top: 0%;
+  z-index: 998;
+  transition: .5s all;
+}
+
+#container-holder:hover > .text-container {
+  margin-top: 0px;
+}
+

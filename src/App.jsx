@@ -7,7 +7,15 @@ import './App.css'
 function App() {
     return (
         <Layout>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus totam eaque numquam quia harum minima soluta vero, natus praesentium dolore facere culpa sapiente quasi! Quasi vitae commodi sequi nisi cum.
+            <div className="section">
+                <video loop autoPlay>
+                    <source src='https://sei.dost.gov.ph/wmc/video/nwmc2022.mp4' type='video/mp4' />
+                </video>
+            </div>
+            <hr className='my-5' />
+            <div className="container mx-auto">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime doloribus saepe alias sequi corporis qui dignissimos! Dignissimos fuga, eaque quos consequuntur voluptatem aperiam ut harum quae ipsum repellendus asperiores expedita!
+            </div>
         </Layout>
     )
 }
