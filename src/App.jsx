@@ -7,10 +7,12 @@ import './App.css'
 function App() {
     return (
         <Layout>
-            <div className="section">
-                <video loop autoPlay>
-                    <source src='https://sei.dost.gov.ph/wmc/video/nwmc2022.mp4' type='video/mp4' />
-                </video>
+            <div className="section bg-black">
+                <div className="container mx-auto pt-24">
+                    <video loop autoPlay>
+                        <source src='https://sei.dost.gov.ph/wmc/video/nwmc2022.mp4' type='video/mp4' />
+                    </video>
+                </div>
             </div>
             <hr className='my-5' />
             <div className="container mx-auto">

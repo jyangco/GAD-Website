@@ -1,5 +1,5 @@
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey; 
@@ -10,7 +10,7 @@
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #47B5FF; 
+  background: #804f7c; 
 }
 
 body, html{
@@ -40,3 +40,128 @@ body, html{
   margin-top: 0px;
 }
 
+#tab:hover > .tab-content{
+  visibility: visible;
+}
+
+.tab-content{
+  visibility: hidden;
+}
+
+.ribbon {
+  width: 50%;
+  position: relative;
+  background: #ba89b6;
+  color: #fff;
+  text-align: center;
+  margin: 120px auto 50px;
+  padding: 5px;
+}
+
+.ribbon:before, .ribbon:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -25px;
+  border: 25px solid #986794;
+  z-index: -1;
+}
+
+.ribbon:before {
+  left: -33px;
+  border-right-width: 24px;
+  border-left-color: transparent;
+}
+
+.ribbon:after {
+  right: -33px;
+  border-left-width: 24px;
+  border-right-color: transparent;
+}
+
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+  content: "";
+  position: absolute;
+  display: block;
+  border-style: solid;
+  border-color: #804f7c transparent transparent transparent;
+  bottom: -15px;
+}
+
+.ribbon .ribbon-content:before {
+  left: 0;
+  border-width: 15px 0 0 15px;
+}
+
+.ribbon .ribbon-content:after {
+  right: 0;
+  border-width: 15px 15px 0 0;
+}
+
+#photo{
+  width: 200px;
+  height: 200px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+}
+
+.flip-card .inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card .inner .front,
+.flip-card .inner .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flip-card .inner .front {
+  background-color: transparent;
+}
+
+.flip-card .inner .back {
+  background-color: #804f7c;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-card:hover .inner {
+  transform: rotateY(180deg);
+}
+
+.view {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: transform 1.5s, opacity 3s;
+}
+
+.view.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  z-index: 998;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+}
