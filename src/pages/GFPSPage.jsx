@@ -108,7 +108,7 @@ function GFPSPage() {
                                                 <div className="back rounded-3xl">
                                                     <div className="text-center text-xl font-sans">
                                                         <p className="m-0 italic"> Cynthia T. Gayya </p>
-                                                        <p className="m-0"> Chief OIC, SEID </p>
+                                                        <p className="m-0"> Chief, SEID </p>
                                                         <p className="m-0"> Member </p>
                                                     </div>
                                                 </div>

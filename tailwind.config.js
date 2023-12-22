@@ -22,6 +22,7 @@ export default {
       },
       boxShadow: {
         'inner': 'inset -5px -5px 150px 10px #D3B5E5;',
+        '2xl': '10px 10px #000000;'
       }
     },
   },

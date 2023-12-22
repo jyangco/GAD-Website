@@ -1,167 +1,292 @@
 ::-webkit-scrollbar {
-  width: 5px;
+    width: 5px;
+    height: 5px;
 }
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
-  border-radius: 10px;
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: grey ; 
-  border-radius: 10px;
+    background: grey ; 
+    border-radius: 10px;
 }
-::-webkit-scrollbar-thumb:hover {
-  background: #804f7c; 
+    ::-webkit-scrollbar-thumb:hover {
+    background: #804f7c; 
 }
 
 body, html{
-  /* font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace; */
-  /* background: #F6EEF0; */
-  font-family: 'Calibri';
+    /* font-family: "SF Mono","Fira Code","Fira Mono","Roboto Mono",monospace; */
+    /* background: #F6EEF0; */
+    font-family: 'Calibri';
 }
 
 #container-holder{
-  position: relative;
-  background: white;
-  display: inline-block;
-  overflow: hidden;
+    position: relative;
+    background: white;
+    display: inline-block;
+    overflow: hidden;
 }
 
 .text-container{
-  position: absolute;
-  background-color: white;
-  margin-top: -690px;
-  width: 100%;
-  top: 0%;
-  z-index: 998;
-  transition: .5s all;
+    position: absolute;
+    background-color: white;
+    margin-top: -690px;
+    width: 100%;
+    top: 0%;
+    z-index: 998;
+    transition: .5s all;
 }
 
 #container-holder:hover > .text-container {
-  margin-top: 0px;
+    margin-top: 0px;
 }
 
 #tab:hover > .tab-content{
-  visibility: visible;
+    visibility: visible;
 }
 
 .tab-content{
-  visibility: hidden;
+    visibility: hidden;
 }
 
 .ribbon {
-  width: 50%;
-  position: relative;
-  background: #ba89b6;
-  color: #fff;
-  text-align: center;
-  margin: 120px auto 50px;
-  padding: 5px;
+    width: 50%;
+    position: relative;
+    background: #ba89b6;
+    color: #fff;
+    text-align: center;
+    margin: 120px auto 50px;
+    padding: 5px;
 }
 
 .ribbon:before, .ribbon:after {
-  content: "";
-  position: absolute;
-  display: block;
-  bottom: -25px;
-  border: 25px solid #986794;
-  z-index: -1;
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -25px;
+    border: 25px solid #986794;
+    z-index: -1;
 }
 
 .ribbon:before {
-  left: -33px;
-  border-right-width: 24px;
-  border-left-color: transparent;
+    left: -33px;
+    border-right-width: 24px;
+    border-left-color: transparent;
 }
 
 .ribbon:after {
-  right: -33px;
-  border-left-width: 24px;
-  border-right-color: transparent;
+    right: -33px;
+    border-left-width: 24px;
+    border-right-color: transparent;
 }
 
 .ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
-  content: "";
-  position: absolute;
-  display: block;
-  border-style: solid;
-  border-color: #804f7c transparent transparent transparent;
-  bottom: -15px;
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #804f7c transparent transparent transparent;
+    bottom: -15px;
 }
 
 .ribbon .ribbon-content:before {
-  left: 0;
-  border-width: 15px 0 0 15px;
+    left: 0;
+    border-width: 15px 0 0 15px;
 }
 
 .ribbon .ribbon-content:after {
-  right: 0;
-  border-width: 15px 15px 0 0;
+    right: 0;
+    border-width: 15px 15px 0 0;
 }
 
 #photo{
-  width: 200px;
-  height: 200px;
+    width: 200px;
+    height: 200px;
 }
 
 .flip-card {
-  background-color: transparent;
-  width: 200px;
-  height: 200px;
+    background-color: transparent;
+    width: 200px;
+    height: 200px;
 }
 
 .flip-card .inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
 }
 
 .flip-card .inner .front,
 .flip-card .inner .back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .flip-card .inner .front {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 .flip-card .inner .back {
-  background-color: #804f7c;
-  color: white;
-  transform: rotateY(180deg);
+    background-color: #804f7c;
+    color: white;
+    transform: rotateY(180deg);
 }
 
 .flip-card:hover .inner {
-  transform: rotateY(180deg);
+    transform: rotateY(180deg);
 }
 
 .view {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: transform 1.5s, opacity 3s;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: transform 1.5s, opacity 3s;
 }
 
 .view.active {
-  opacity: 1;
-  transform: translateX(0);
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .overlay {
-  position: fixed;
-  top: 0;
-  z-index: 998;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    z-index: 998;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+#folder:hover i{
+    animation: shake .75s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.highlights:hover{
+    cursor: pointer;
+    animation: 1s linear 0 spin;
+    animation-iteration-count: infinite;
+    border-top: 15px solid #D3B5E5;
+    border-right: 15px solid #E5BBB5;
+    border-bottom: 15px solid #C7E5B5;
+    border-left: 15px solid #B5DFE5;
+}
+
+@keyframes spin {
+    25%{
+        border-top: 15px solid #B5DFE5;
+        border-right: 15px solid #D3B5E5;
+        border-bottom: 15px solid #E5BBB5;
+        border-left: 15px solid #C7E5B5;
+    }
+    50% {
+        border-top: 15px solid #C7E5B5;
+        border-right: 15px solid #B5DFE5;
+        border-bottom: 15px solid #D3B5E5;
+        border-left: 15px solid #E5BBB5;
+    }
+    75% {
+        border-top: 15px solid #E5BBB5;
+        border-right: 15px solid #C7E5B5;
+        border-bottom: 15px solid #B5DFE5;
+        border-left: 15px solid #D3B5E5;
+    }
+    100%{
+        border-top: 15px solid #D3B5E5;
+        border-right: 15px solid #E5BBB5;
+        border-bottom: 15px solid #C7E5B5;
+        border-left: 15px solid #B5DFE5;
+    }
+}
+
+.highlights2:hover{
+    cursor: pointer;
+    animation: 3s linear 0 spin2;
+    animation-iteration-count: infinite;
+    border-top: 15px solid #ED6D0C;
+    border-right: 15px solid #FBA445;
+    border-bottom: 15px solid #FB7A0B;
+    border-left: 15px solid #FBD5BE;
+}
+
+@keyframes spin2 {
+    25%{
+        border-top: 15px solid #FBD5BE;
+        border-right: 15px solid #ED6D0C;
+        border-bottom: 15px solid #FBA445;
+        border-left: 15px solid #FB7A0B;
+    }
+    50% {
+        border-top: 15px solid #FB7A0B;
+        border-right: 15px solid #FBD5BE;
+        border-bottom: 15px solid #ED6D0C;
+        border-left: 15px solid #FBA445;
+    }
+    75% {
+        border-top: 15px solid #FBA445;
+        border-right: 15px solid #FB7A0B;
+        border-bottom: 15px solid #FBD5BE;
+        border-left: 15px solid #ED6D0C;
+    }
+    100%{
+        border-top: 15px solid #ED6D0C;
+        border-right: 15px solid #FBA445;
+        border-bottom: 15px solid #FB7A0B;
+        border-left: 15px solid #FBD5BE;
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-main {
+    position:fixed;
+    width: fit-content;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%,-50%);
+    overflow-x: auto;
+    border: 2px solid black;
+    background: white;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
 }

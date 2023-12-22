@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom' 
+import { NavLink, Link } from 'react-router-dom' 
 
 function Header() {
     const [ divName, setName ] = useState('-translate-y-[300px]')
@@ -66,9 +66,33 @@ function Header() {
                         <img className='h-full p-1' src={window.location.origin + '/GAD-Logo_3D-nobg.png'} />
                     </div>
                     <div className="flex text-xl py-2 font-bold">
-                        <Link to={'/'} className='p-4 border-x-2 border-l-4 hover:bg-slate-200 hover:text-black'> HOME </Link>
-                        <Link to={'/IEC-Materials'} className='p-4 border-x-2 hover:bg-slate-200 hover:text-black'> IEC MATERIALS </Link>
-                        <Link to={'/PPAs'} className='p-4 border-x-2 hover:bg-slate-200 hover:text-black'> PROGRAMS/PROJECTS/ACTIVITIES </Link>
+                        <NavLink to={'/'} className='p-4 border-x-2 border-l-4 hover:bg-slate-200 hover:text-black'> 
+                            {({ isActive }) => ( isActive ?
+                                <span className="border-b-4 text-white">
+                                    HOME
+                                </span>
+                                : 
+                                <span> HOME </span>
+                            )}
+                        </NavLink>
+                        <NavLink to={'/IEC-Materials'} className='p-4 border-x-2 hover:bg-slate-200 hover:text-black'>
+                            {({ isActive }) => ( isActive ?
+                                <span className="border-b-4 text-white">
+                                    IEC MATERIALS 
+                                </span>
+                                : 
+                                <span> IEC MATERIALS  </span>
+                            )}
+                        </NavLink>
+                        <NavLink to={'/PPAs'} className='p-4 border-x-2 hover:bg-slate-200 hover:text-black'> 
+                            {({ isActive }) => ( isActive ?
+                                <span className="border-b-4 text-white">
+                                    PROGRAMS/PROJECTS/ACTIVITIES
+                                </span>
+                                : 
+                                <span> PROGRAMS/PROJECTS/ACTIVITIES </span>
+                            )}
+                        </NavLink>
                         <div id="tab" className='hover:cursor-pointer hover:text-black hover:bg-slate-200 relative p-4 border-x-2 border-r-4'> 
                             ABOUT
                             <i className="ms-1 fas fa-caret-down"></i>

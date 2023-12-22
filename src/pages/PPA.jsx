@@ -40,7 +40,7 @@ function PPA() {
                         <div className='h-[74vh] border-b-4 my-2 p-3 mobile-lg:!h-full'>
                             <div className="flex flex-wrap">
                                 <div className="w-[15%] mobile-lg:!w-[100%]">
-                                    <div style={{textShadow:'8px -5px #800080'}} className="text-9xl mobile-lg:!text-8xl text-center break-all text-violet">
+                                    <div style={{textShadow:'8px -5px #800080'}} className="text-8xl mobile-lg:!text-7xl text-center break-all text-violet">
                                         2021
                                     </div>
                                 </div>
@@ -94,7 +94,7 @@ function PPA() {
                         <div className='h-[74vh] border-b-4 my-2 p-3 mobile-lg:!h-full'>
                             <div className="flex flex-wrap">
                                 <div className="w-[15%] mobile-lg:!w-[100%]">
-                                    <div style={{textShadow:'8px -5px #800080'}} className="text-9xl mobile-lg:!text-8xl text-center break-all text-violet">
+                                    <div style={{textShadow:'8px -5px #800080'}} className="text-8xl mobile-lg:!text-7xl text-center break-all text-violet">
                                         2020
                                     </div>
                                 </div>
@@ -130,7 +130,7 @@ function PPA() {
                         <div className='h-[74vh] border-b-4 my-2 p-3 mobile-lg:!h-full'>
                             <div className="flex flex-wrap">
                                 <div className="w-[15%] mobile-lg:!w-[100%]">
-                                    <div style={{textShadow:'8px -5px #800080'}} className="text-9xl mobile-lg:!text-8xl text-center break-all text-violet">
+                                    <div style={{textShadow:'8px -5px #800080'}} className="text-8xl mobile-lg:!text-7xl text-center break-all text-violet">
                                         2019
                                     </div>
                                 </div>
@@ -175,7 +175,7 @@ function PPA() {
                         <div className='h-[74vh] border-b-4 my-2 p-3 mobile-lg:!h-full'>
                             <div className="flex flex-wrap">
                                 <div className="w-[15%] mobile-lg:!w-[100%]">
-                                    <div style={{textShadow:'8px -5px #800080'}} className="text-9xl mobile-lg:!text-8xl text-center break-all text-violet">
+                                    <div style={{textShadow:'8px -5px #800080'}} className="text-8xl mobile-lg:!text-7xl text-center break-all text-violet">
                                         2018
                                     </div>
                                 </div>
