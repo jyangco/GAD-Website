@@ -290,3 +290,10 @@ body, html{
 .display-none {
     display: none;
 }
+
+.activeTab{
+    color: #804f7c;
+    font-weight: 500;
+    text-decoration: underline wavy;
+    text-underline-offset: 5px;
+}

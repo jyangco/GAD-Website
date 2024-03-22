@@ -17,14 +17,7 @@ export const images = {
                         "/NWMC/NWMC2021/IMG_1615.JPG",
                         "/NWMC/NWMC2021/IMG_1616.JPG",
                     ]
-                },
-                {
-                    "event": "VAW",
-                    "path": [
-                        "/NWMC/NWMC2021/IMG_1595.JPG",
-                        "/NWMC/NWMC2021/IMG_1596.JPG",
-                    ]
-                },
+                }
             ]
         },
         //END OF 2021
@@ -51,7 +44,27 @@ export const images = {
                         "/NWMC/NWMC2022/MicrosoftTeams-image (20).png",
                         "/NWMC/NWMC2022/MicrosoftTeams-image (21).png",
                     ]
-                }
+                },
+                {
+                    "event": "VAW",
+                    "path": [
+                        "/VAW/VAW2022/_DSF0106.JPG",
+                        "/VAW/VAW2022/_DSF0109.JPG",
+                        "/VAW/VAW2022/IMG_0010.JPG",
+                        "/VAW/VAW2022/IMG_0011.JPG",
+                        "/VAW/VAW2022/IMG_0025.JPG",
+                        "/VAW/VAW2022/IMG_0031.JPG",
+                        "/VAW/VAW2022/IMG_0032.JPG",
+                        "/VAW/VAW2022/IMG_0038.JPG",
+                        "/VAW/VAW2022/IMG_0040.JPG",
+                        "/VAW/VAW2022/IMG_0058.JPG",
+                        "/VAW/VAW2022/IMG_0094.JPG",
+                        "/VAW/VAW2022/IMG_2551.JPG",
+                        "/VAW/VAW2022/IMG_2552.JPG",
+                        "/VAW/VAW2022/IMG_2553.JPG",
+                        "/VAW/VAW2022/IMG_2554.JPG",
+                    ]
+                },
             ]
         },
         //END OF 2022

@@ -3,13 +3,28 @@ import { Link } from 'react-router-dom'
 
 import Layout from '../components/Layout'
 import Loader from '../components/Loader'
+import Modal from '../components/Modal'
+
+import { images } from '../components/images'
 
 function VAW() {
     const [ year, setYear ] = useState(2023)
     const [ loading, setLoading ] = useState(true)
+    const [ show, setShow ] = useState(false)
+    const [ selectedPic, setSelectedPic] = useState("")
 
     const selectYear = (e) => {
         setYear(e)
+    }
+
+    const openModal = (e) => {
+        setSelectedPic(e)
+        setShow(true)
+    }
+
+    const closeModal = (e) => {
+        e.preventDefault()
+        setShow(false)
     }
 
     useEffect(() => {
@@ -27,6 +42,11 @@ function VAW() {
 
     return (
         <Layout>
+            <Modal show={show} handleClose={closeModal}>
+                <div className="wrapper-images position-relative">
+                    <img className='w-auto mobile-lg:w-[90vw] h-[70vh] mobile-lg:h-auto' src={window.location.origin + selectedPic} />
+                </div>
+            </Modal>
             <div className="mx-14 p-5 mobile-lg:!mx-5 mobile-lg:!p-2 h-[100vh] overflow-hidden">
                 <div className="mt-[100px] h-[86vh] overflow-y-auto">
                     <Link className="float-left text-decoration-none text-black text-xl" to="/IEC-Materials/Gallery">
@@ -55,6 +75,37 @@ function VAW() {
                             2021
                         </div>
                     </div>
+                    {year == 2021 ? 
+                        <div className="py-3 flex flex-wrap justify-start overflow-y-hidden">
+                            {images.properties.filter(data => data.year == 2021).map(val => 
+                                val.files.filter(data => data.event == "VAW").map(value =>
+                                    value.path.map((imagePath, ndx) => 
+                                        <img onClick={() => openModal(imagePath)} key={ndx} className='w-[33%] h-[500px] border mobile-lg:h-32' src={window.location.origin + imagePath} />
+                                    )
+                                )
+                            )}
+                        </div> :
+                    year == 2022 ?
+                        <div className="py-3 flex flex-wrap justify-start overflow-y-hidden">
+                            {images.properties.filter(data => data.year == 2022).map(val => 
+                                val.files.filter(data => data.event == "VAW").map(value =>
+                                    value.path.map((imagePath, ndx) => 
+                                        <img onClick={() => openModal(imagePath)} key={ndx} className='w-[33%] h-[500px] border mobile-lg:h-32' src={window.location.origin + imagePath} />
+                                    )
+                                )
+                            )}
+                        </div> :
+                    year == 2023 ?
+                        <div className="py-3 flex flex-wrap justify-start overflow-y-hidden">
+                            {images.properties.filter(data => data.year == 2023).map(val => 
+                                val.files.filter(data => data.event == "VAW").map(value =>
+                                    value.path.map((imagePath, ndx) => 
+                                        <img onClick={() => openModal(imagePath)} key={ndx} className='w-[33%] h-[500px] border mobile-lg:h-32' src={window.location.origin + imagePath} />
+                                    )
+                                )
+                            )}
+                        </div> : ""
+                    }
                 </div>
             </div>
         </Layout>
